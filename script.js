@@ -130,18 +130,7 @@ function drawMap() {
                         let interval = (end-start)/10
                         return colors(1-(linkedItem[i]-start)*0.1/interval)
                     })
-                // let pieDataFilteredArr = []
-                // for (var i = 0; i < linkedItem.length; i++) {
-                //     let val = linkedItem[i]
-                //     for (var j = 0; j < pieData.length; j++){
-                //         if (parseInt(pieData[j].value) === val){
-                //             pieDataFilteredArr.push(pieData[j])
-                //         }
-                //     }
-                // }
-                // for (var i = 0; i < pieDataFilteredArr.length; i++) {
-                //     console.log('arr: ' + pieDataFilteredArr[i])
-                // }
+
                 linked_chart
                     .selectAll('mySlices')
                     .data(pieData)
@@ -151,22 +140,31 @@ function drawMap() {
                         return pieData[i].value +'%'}
                     )
                     .attr("transform", function(d) {
-                        let x = 0.8*segments1.centroid(d)[0]+100
-                        let y = 0.8*segments1.centroid(d)[1]+100
+                        let x = 1.2*segments1.centroid(d)[0]+100
+                        let y = 1.2*segments1.centroid(d)[1]+100
                         return "translate(" +x+','+y  + ")";
                     })
                     .style("text-anchor", "middle")
-                    .style("font-size", 10)
+                    .style("font-size", 12)
 
             }
-            tooltip.text(county['fips']+'-'+county['area_name']+', '+county['state']+
-            ': '+county['bachelorsOrHigher']+'%')
+            linked_chart.append('text')
+                .attr('x', 0)
+                .attr('y', 250)
+                .text('The top 5 counties edu rate for' )
+            linked_chart.append('text')
+                .attr('x', 0)
+                .attr('y', 270)
+                .text('State '+stateName )
+            tooltip.text('The education rate of bachelors or higher for' +
+                ' the county '+county['area_name']+', '+county['state']+
+            ' is: '+county['bachelorsOrHigher']+'%')
 
 
             xPos = posArr[0]+50
             yPos = posArr[1]+50
             linked_chart.attr('width', 200)
-                .attr('height', 200)
+                .attr('height', 300)
                 .attr('style', 'opacity:1')
                 .style('background-color', '#efefef')
                 .attr('transform', 'translate('+xPos+','+yPos+')')
@@ -181,6 +179,7 @@ function drawMap() {
         .on('mouseout', (e, countyDataItem)=>{
             tooltip.transition()
                 .style('visibility', 'hidden')
+            // linked_chart.selectAll('text').remove()
             linked_chart.attr('style', 'opacity:0')
         })
 }
@@ -234,15 +233,25 @@ function drawPie(){
             console.log('index: '+countyDataItem.index)
             let pie_state_name = keys[countyDataItem.index]
             let pie_state_name_str = String(pie_state_name)
+            x = pie_state_name_str
             // console.log('pie state name: '+pie_state_name_str)
+            d3.selectAll(".county").each(function(d,i) {
+                if (d3.select(this).attr('stateName')===pie_state_name_str){
+                    d3.select(this).attr('fill', 'cyan')
+                    // setTimeout(d3.select(this).attr('fill', 'yellow'), 5000)
+                }
+            })
+
+            tooltip2.text('The average county education rate of bachelors or higher for state '+keys[countyDataItem.index]
+                +' is '+values[countyDataItem.index]+'%')
+            tooltip2.attr('style', 'opacity:1')
+
             d3.selectAll(".county").each(function(d,i) {
                 if (d3.select(this).attr('stateName')===pie_state_name_str){
                     d3.select(this).attr('fill', 'cyan')
                 }
             })
-            tooltip2.text('The average county education rate of bachelors or higher for state '+keys[countyDataItem.index]
-                +' is '+values[countyDataItem.index]+'%')
-            tooltip2.attr('style', 'opacity:1')
+            // setTimeout(colorWait, 5000)
         })
         .on('mouseout', (e, countyDataItem)=>{
             tooltip2.attr('style', 'opacity:0')
@@ -254,9 +263,7 @@ function drawPie(){
         .enter()
         .append('text')
         .text(function(d, i){
-            // console.log('d: '+);
-            // console.log(segments.centroid(d))
-            return pieData[i].value +'%'}
+            return pieData[i].value.toFixed(2) +'%'}
             )
         .attr("transform", function(d) {
             let x = 1.6*segments.centroid(d)[0]+500
@@ -265,11 +272,7 @@ function drawPie(){
         })
         .style("text-anchor", "middle")
         .style("font-size", 12)
-
-
-
 }
-
 
 d3.json(countyURL).then(
     (data, error) => {

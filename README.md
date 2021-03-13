@@ -1,55 +1,64 @@
 Assignment 4 - DataVis Remix + Multiple Views
 ===
 
-The primary aim of this assignment is to showcase your **individual** skills at critiquing, redesigning, and extending visualizations on the web.
+The following picture is the original vis that I chose to work on:
 
-### Your Task
+![](img/img4.png)
 
-Your task is to choose a visualization, remix it, and add at least two linked-views.
+It shows the education rate of bachelors or higher in each 
+county in U.S. However, from this vis, we can only get a rough
+understanding about the data from the color and the county boundaries.
+Other than that, we are not able to get details.
 
-By remix, we mean:
+To make it better, I made it possible for users to view the data
+when they hover over a county. There is a tooltip at the upper-left
+corner, telling the user about the education rate detail and which
+county the user is looking at. There is also a tooltip svg that
+contains a small pie chart inside. The small pie chart tells the
+ user about the top five counties' education rate in the State
+  which the user is hovering over.
 
-- Critique the original vis
-- Redesign some aspect of it, using better task abstractions, encodings, etc.
-- Implement your redesign
+![](img/img1.png)
 
-Examples of remixes include:
-- taking a static choropleth map with a bad color scale, implementing a new version in d3, adding interactivity, and improving the color scale to show the original data in a more effective way
-- finding a poorly designed or hard-to-use interactive visualization, and making a new version with better interaction design, such as features that enable the user to explore the data in new ways, by adding new views
+Besides what I have introduced, I created another linked view
+ for the map. My linked view is a big pie chart, which shows below:
 
-By two linked views, we mean:
+![](img/img5.png)
 
-- Have two separate visualizations (likely separate SVGs), that visualize data using different idioms
-- Linked views means that interacting in one updates the other, and vice versa. Think about the interaction flow that leads to good user experience and aligns with tasks you've identified.
+However, it does tells a slightly different story from the map.
+The big pie chart shows the AVERAGE education rate of bachelors
+or higher for each State. Because the data source does not include
+all the counties in U.S., instead, it picks several counties for
+each state, the only way to make the evaluation most accurate
+is to show the average rate for each State instead of using the total.
+The big pie chart has a notation on each slice that directly
+tells the user about the data for each state. By hovering over
+each slice, there will also be a tooltip at the upper-left corner
+about the details.
 
-Examples of linked views include:
-- A large central map or scatterplot, with ancillary histograms that can be used to filter-- perhaps time or other dimensions
+![](img/img3.png)
 
+My interaction is about color change. If the user hovers over
+the map, the slice of the big pie chart that corresponds to 
+the state that the user is hovering at will change its color to
+Cyan. In this way, the user can scroll down to the big pie chart
+and take a closer look about it, vice versa.
 
-**Remember: the intent of this assignment is for you to demonstrate your understanding of the theory (e.g. concepts from Munzner's book) and practice (d3, and any tools you use for exploring the data) of visualization.**
+![](img/img2.png)
 
-Incorporating a brief writeup with your remix is a good idea.
-Communicate what the original vis was, what the major issues were, and what new things can be seen with your redesign.
-You could have text directly on the page, an "info" button, an about page, etc.
+The data source is included in the data_resource.txt.
 
-### More on Two Linked Views 
-One of the most powerful techniques for mitigating the shortcomings of a given visualization is to link it with other views.
+##Design Achievement:
+I scaled the color for pie charts. The darker the red is, the
+higher the education rate the slice represents. Dark colors
+tend to have a deeper impression on people, so when they look
+at the pie charts, they will immediately know which education rate
+is big and which is small.
 
-Linking a map to a bar or scatterplot, for instance, may allow you to overcome the shortcomings of a map.
+##Technical Achievement:
+I added the small pie chart as a tooltip that will only appear
+when the user hovers over a county, and its position depends
+on the mouse. This additional small pie chart gathers additional
+information (top five counties in the same State as the county
+ that the user hovers over). It can be taken as a bonus.
 
-In general, linking visualizations allows you to explore different parts of the data between views, and mitigates the shortcomings of a given view by pairing it with other views.
-
-For this assignment, we want to see at least two linked views, in that interactions in one view updates the other, and vice versa. Many multiple views visualizations use more than two views, so consider such directions as possibilities for tech/design achievements. Be sure to think about what views work best for given tasks, and try to iterate/prototype if possible.
-
-Requirements
----
-
-0. Your code should be forked from the GitHub repo and linked using GitHub pages.
-1. Your project should load a dataset you found on the web from the vis you're remixing. You may extract the data by sight if necessary. Put this file in your repo.
-2. Your project should use d3 to build a visualization of the dataset. 
-3. Your writeup (readme.md in the repo) should contain the following:
-
-- Working link to the visualization hosted on gh-pages or other external sources.
-- Concise description and screenshot of your visualization.
-- Description of the technical achievements you attempted with this visualization.
-- Description of the design achievements you attempted with this visualization.
