@@ -1,57 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="73ad5b33-f0a4-41d1-bd96-59fb0f2edd5a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/data_resource.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/img1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/img2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/img3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/img4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/img5.png" afterDir="false" />
+    <list default="true" id="14f92742-29ae-4e9c-9a6d-36bb30c171ed" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1pDGRiPuqSJs4WvRwAiNG6aVVWe" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1pgjgjqlu0pwLkBpoRAbmDj58ID" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -59,54 +21,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/img" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\rin\Desktop\04-Remix\img" />
-    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="73ad5b33-f0a4-41d1-bd96-59fb0f2edd5a" name="Default Changelist" comment="" />
-      <created>1614710241513</created>
+      <changelist id="14f92742-29ae-4e9c-9a6d-36bb30c171ed" name="Default Changelist" comment="" />
+      <created>1615611742958</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1614710241513</updated>
-      <workItem from="1614710242718" duration="83039000" />
+      <updated>1615611742958</updated>
+      <workItem from="1615611744994" duration="1032000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="176" y="116" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1615463583136">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="176" y="116" width="1089" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.920@0.0.1440.920" timestamp="1615463583136" />
-    <state x="377" y="211" key="run.anything.popup" timestamp="1615608045832">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="377" y="211" key="run.anything.popup/0.0.1440.920@0.0.1440.920" timestamp="1615608045832" />
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup" timestamp="1615328332524">
-      <screen x="0" y="0" width="1440" height="920" />
-    </state>
-    <state x="383" y="195" width="672" height="678" key="search.everywhere.popup/0.0.1440.920@0.0.1440.920" timestamp="1615328332524" />
   </component>
 </project>

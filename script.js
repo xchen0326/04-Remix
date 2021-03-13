@@ -153,6 +153,7 @@ function drawMap() {
                 .attr('y', 250)
                 .text('The top 5 counties edu rate for' )
             linked_chart.append('text')
+                .attr('id', 'instr')
                 .attr('x', 0)
                 .attr('y', 270)
                 .text('State '+stateName )
@@ -179,7 +180,8 @@ function drawMap() {
         .on('mouseout', (e, countyDataItem)=>{
             tooltip.transition()
                 .style('visibility', 'hidden')
-            // linked_chart.selectAll('text').remove()
+
+            linked_chart.select('#instr').remove()
             linked_chart.attr('style', 'opacity:0')
         })
 }
