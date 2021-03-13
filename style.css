@@ -1,0 +1,26 @@
+#map, #pie{
+    background-color: #efefef;
+}
+#tooltip{
+    background-color: aquamarine;
+    /*visibility: hidden;*/
+    /*height: auto;*/
+    /*width: auto;*/
+    top: 10px;
+}
+#mapDiv, #pieDiv{
+    position: absolute;
+}
+#pieDiv{
+    top:700px
+}
+#tooltip2{
+    position: absolute;
+    background-color: aquamarine;
+    top: 690px;
+}
+text{
+    font-size: 15px;
+    font-weight: bold;
+    fill: white;
+}
