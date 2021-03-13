@@ -48,14 +48,14 @@ and take a closer look about it, vice versa.
 
 The data source is included in the data_resource.txt.
 
-##Design Achievement:
+## Design Achievement:
 I scaled the color for pie charts. The darker the red is, the
 higher the education rate the slice represents. Dark colors
 tend to have a deeper impression on people, so when they look
 at the pie charts, they will immediately know which education rate
 is big and which is small.
 
-##Technical Achievement:
+## Technical Achievement:
 I added the small pie chart as a tooltip that will only appear
 when the user hovers over a county, and its position depends
 on the mouse. This additional small pie chart gathers additional
