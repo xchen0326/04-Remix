@@ -1,6 +1,8 @@
 Assignment 4 - DataVis Remix + Multiple Views
 ===
 
+Link: https://xchen0326.github.io/04-Remix/
+
 The following picture is the original vis that I chose to work on:
 
 ![](img/img4.png)
